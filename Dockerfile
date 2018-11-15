@@ -12,10 +12,10 @@ RUN apk update \
     && rm -rf /tmp/release_stable_$dokuwiki_version.tar.gz \
     && mv /var/www/dokuwiki/dokuwiki-release_stable_$dokuwiki_version/* /var/www/dokuwiki \
     && rm -rf /var/www/dokuwiki/dokuwiki-release_stable_$dokuwiki_version \
-    && apk add php-xml \
-    && apk add php-session \
-    && apk add php-json \
-    && apk add php-ssl \
+    && apk add php7-xml \
+    && apk add php7-session \
+    && apk add php7-json \
+    && apk add php7-openssl \
     && chown -R apache:apache /var/www/dokuwiki/* \
     && rm -rf /var/cache/apk/*
 
