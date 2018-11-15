@@ -20,10 +20,10 @@ Description of parameters :
   - **dtroncy/rpi-dokuwiki** : Image's name
 
 If you want to persist your dokuwiki's data, you can add -v option for this folders :
-- **data/pages** - contains your current pages
-- **data/meta** - contains meta information about your pages (like who created it originally, who subscribed to it, …)
-- **data/media** - contains your current media (images, PDFs, …)
-- **data/media_meta** - meta data for the media
-- **data/attic** - all the old versions of your pages
-- **data/media_attic** - all the old versions of your media
-- **conf** - the configuration settings
+  - **data/pages** - contains your current pages
+  - **data/meta** - contains meta information about your pages (like who created it originally, who subscribed to it, …)
+  - **data/media** - contains your current media (images, PDFs, …)
+  - **data/media_meta** - meta data for the media
+  - **data/attic** - all the old versions of your pages
+  - **data/media_attic** - all the old versions of your media
+  - **conf** - the configuration settings
