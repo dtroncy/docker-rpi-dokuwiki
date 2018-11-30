@@ -6,9 +6,12 @@ This is a raspberry pi compatible dokuwiki DockerFile.
 
 To build it :
 
-    docker build --build-arg dokuwiki_version=$dokuwiki_version -t dtroncy/rpi-dokuwiki .
+    docker build --build-arg dokuwiki_version=$dokuwiki_version --build-arg UID=$UID --build-arg GID=$GID -t dtroncy/rpi-dokuwiki .
 
-$dokuwiki_version is version of dokuwiki you want to build.
+  - **$dokuwiki_version** - Version of dokuwiki you want to build
+  - **$UID** - UID of apache user you want to set (if not set, default is "100")
+  - **$GID** - GID of apache group you want to set (if not set, default is "101")
+
 
 To run it (with image on docker hub) :
 

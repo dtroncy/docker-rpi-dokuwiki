@@ -1,11 +1,19 @@
+ARG UID=100
+ARG GID=101
+
 FROM dtroncy/rpi-php7:7.2.10-r0
 
+ARG UID
+ARG GID
 ARG dokuwiki_version
 
 LABEL maintainer="dtroncy"
 
 RUN apk update \
     && apk upgrade \
+    && apk --no-cache add shadow \
+    && groupmod -g $GID apache \
+    && usermod -u $UID apache \ 
     && wget -P /tmp --no-check-certificate https://github.com/splitbrain/dokuwiki/archive/release_stable_$dokuwiki_version.tar.gz \
     && mkdir /var/www/dokuwiki \
     && tar -xvzf /tmp/release_stable_$dokuwiki_version.tar.gz -C /var/www/dokuwiki \
