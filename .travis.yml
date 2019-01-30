@@ -3,7 +3,7 @@ services:
   - docker
 language: bash
 env:
-  - dokuwiki_version=2018-04-22a
+  - dokuwiki_version=2018-04-22b
 script:
 # prepare qemu
   - docker run --rm --privileged multiarch/qemu-user-static:register --reset
