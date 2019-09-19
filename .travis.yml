@@ -18,8 +18,6 @@ script:
   - docker buildx create --name builder
   - docker buildx use builder
   - docker buildx inspect --bootstrap
-# build image
-  - docker build --build-arg dokuwiki_version=$dokuwiki_version -t dtroncy/rpi-dokuwiki .
 # if master branch, build image and push it
   - >
     if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
