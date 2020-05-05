@@ -1,7 +1,7 @@
 ARG UID=100
 ARG GID=101
 
-FROM dtroncy/rpi-php7:7.2.21-r0
+FROM dtroncy/rpi-php7:7.3.17-r0
 
 ARG UID
 ARG GID
