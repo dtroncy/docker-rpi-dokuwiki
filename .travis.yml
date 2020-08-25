@@ -1,7 +1,7 @@
 sudo: required
 language: bash
 env:
-  - dokuwiki_version=2018-04-22c
+  - dokuwiki_version=2020-07-29
 # install last docker version
 before_install:
   - sudo apt-get remove docker docker-engine docker.io containerd runc
